@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>yt pictures | Film Production Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>
+tailwind.config={
+theme:{
+extend:{
+colors:{
+primary:'#000000',
+secondary:'#ffffff'
+},
+borderRadius:{
+'none':'0px',
+'sm':'4px',
+DEFAULT:'8px',
+'md':'12px',
+'lg':'16px',
+'xl':'20px',
+'2xl':'24px',
+'3xl':'32px',
+'full':'9999px',
+'button':'8px'
+}
+}
+}
+}
+</script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Helvetica Neue', sans-serif;
+background-color: #000000;
+color: #ffffff;
+}
+.custom-cursor {
+width: 20px;
+height: 20px;
+border: 2px solid #ffffff;
+border-radius: 50%;
+position: fixed;
+pointer-events: none;
+transform: translate(-50%, -50%);
+z-index: 9999;
+transition: transform 0.1s ease;
+mix-blend-mode: difference;
+}
+.portfolio-item:hover img {
+transform: scale(1.05);
+filter: grayscale(0%);
+}
+.portfolio-item img {
+transition: all 0.5s ease;
+filter: grayscale(100%);
+}
+.service-card:hover .service-details {
+opacity: 1;
+transform: translateY(0);
+}
+.service-details {
+opacity: 0;
+transform: translateY(10px);
+transition: all 0.3s ease;
+}
+.bts-image {
+transition: all 0.3s ease;
+}
+.bts-item:hover .bts-caption {
+opacity: 1;
+}
+.bts-caption {
+opacity: 0;
+transition: opacity 0.3s ease;
+}
+input, textarea {
+background-color: transparent;
+border: 1px solid rgba(255, 255, 255, 0.2);
+color: #ffffff;
+transition: all 0.3s ease;
+}
+input:focus, textarea:focus {
+border-color: #ffffff;
+outline: none;
+}
+.nav-link {
+position: relative;
+}
+.nav-link::after {
+content: '';
+position: absolute;
+width: 0;
+height: 1px;
+bottom: -2px;
+left: 0;
+background-color: #ffffff;
+transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+width: 100%;
+}
+.horizontal-scroll {
+overflow-x: auto;
+scrollbar-width: none;
+-ms-overflow-style: none;
+}
+.horizontal-scroll::-webkit-scrollbar {
+display: none;
+}
+.timeline-dot {
+transition: transform 0.3s ease;
+}
+.timeline-dot:hover {
+transform: scale(1.5);
+}
+</style>
+</head>
+<body>
+<!-- Header Section -->
+<header class="fixed top-0 left-0 w-full z-50 mix-blend-difference">
+<div class="container mx-auto px-6 py-8 flex justify-between items-center">
+<a href="#" class="text-2xl font-medium tracking-tight">yt pictures</a>
+<nav class="hidden md:flex items-center gap-12">
+<a href="#work" class="nav-link text-white text-sm uppercase tracking-wider">Work</a>
+<a href="#services" class="nav-link text-white text-sm uppercase tracking-wider">Services</a>
+<a href="#about" class="nav-link text-white text-sm uppercase tracking-wider">About</a>
+<a href="#contact" class="nav-link text-white text-sm uppercase tracking-wider">Contact</a>
+</nav>
+
+</div>
+</header>
+<!-- Mobile Menu -->
+<div class="fixed inset-0 bg-black z-50 transform translate-x-full transition-transform duration-300 ease-in-out" id="mobile-menu">
+  <div class="flex justify-end p-6">
+  <button class="w-10 h-10 flex items-center justify-center text-white" id="close-menu">
+  
+  </button>
+  </div>
+<div class="flex flex-col items-center justify-center h-full space-y-8 -mt-20">
+<a href="#portfolio" class="text-white text-2xl hover:text-gray-300 transition">Portfolio</a>
+<a href="#services" class="text-white text-2xl hover:text-gray-300 transition">Services</a>
+<a href="#about" class="text-white text-2xl hover:text-gray-300 transition">About</a>
+<a href="#contact" class="text-white text-2xl hover:text-gray-300 transition">Contact</a>
+</div>
+</div>
+<!-- Hero Section -->
+<section class="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img src="IMG_9432.jpg" 
+class="w-full h-full object-cover opacity-50" alt="Studio Background">
+</div>
+<div></div>
+<div class="flex flex-col items-center gap-12">
+<p class="text-2xl md:text-3xl text-gray-300 max-w-2xl mx-auto"></p>
+<div class="flex gap-6">
+<a href="#work" class="group inline-flex items-center gap-3 text-lg border border-white px-8 py-3 !rounded-button hover:bg-white hover:text-black transition-all whitespace-nowrap">
+</a>
+<a href="#contact" class="group inline-flex items-center gap-3 text-lg px-8 py-3 !rounded-button hover:text-gray-300 transition-all whitespace-nowrap">
+>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="absolute bottom-12 left-1/2 -translate-x-1/2 z-10">
+<div class="text-sm text-gray-300 uppercase tracking-widest">Scroll to explore</div>
+</div>
+</section>
+<!-- Featured Work -->
+<section id="work" class="py-32">
+<div class="container mx-auto px-6">
+<div class="mb-24 text-center">
+<h2 class="text-7xl font-bold mb-8">Selected Works</h2>
+<p class="text-xl text-gray-300 max-w-2xl mx-auto">THOUGHTS ON A CANVAS.</p>
+</div>
+<div class="grid grid-cols-1 gap-24">
+<!-- Project 1 -->
+<div class="group">
+<a href="https://youtu.be/Y8nQZGEd47M?si=1x-8Fld_3AkTvM-h" class="block relative overflow-hidden aspect-[21/9] mb-8">
+<img src=" DSCF9713.jpg"
+class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="KUYO Project">
+</a>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-4xl font-bold mb-3">KUYO</h3>
+<p class="text-xl text-gray-300">Feature Film, 2024</p>
+</div>
+<a href="https://youtu.be/Y8nQZGEd47M?si=1x-8Fld_3AkTvM-h" class="group inline-flex items-center gap-2 text-lg hover:text-gray-300 transition-colors" target="_blank" rel="noopener">
+View Project
+<i class="ri-arrow-right-line transition-transform group-hover:translate-x-2"></i>
+</a>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="group">
+<a href="https://youtu.be/KQNppAr9e9M?si=--Lzip8M7-KYP2bJ" class="block relative overflow-hidden aspect-[21/9] mb-8">
+<img src="clean.jpg"
+class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Project 2">
+</a>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-4xl font-bold mb-3">CLEAN SLATE</h3>
+<p class="text-xl text-gray-300">Short Film, 2024</p>
+</div>
+<a href="https://youtu.be/KQNppAr9e9M?si=--Lzip8M7-KYP2bJ" class="group inline-flex items-center gap-2 text-lg hover:text-gray-300 transition-colors" target="_blank" rel="noopener">
+View Project
+<i class="ri-arrow-right-line transition-transform group-hover:translate-x-2"></i>
+</a>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="group">
+<a href="https://youtu.be/mAgXi34_qI8?si=zCiapmLWu58IPfXs" class="block relative overflow-hidden aspect-[21/9] mb-8">
+<img src="IMG-20250514-WA0006.jpg"
+class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="REQUEM OF BURDEN">
+</a>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-4xl font-bold mb-3">REQUEM OF BURDEN</h3>
+<p class="text-xl text-gray-300">Experimental Film, 2024</p>
+</div>
+<a href="https://youtu.be/mAgXi34_qI8?si=zCiapmLWu58IPfXs" class="group inline-flex items-center gap-2 text-lg hover:text-gray-300 transition-colors" target="_blank" rel="noopener">
+View Project
+<i class="ri-arrow-right-line transition-transform group-hover:translate-x-2"></i>
+</a>
+</div>
+</div>
+<!-- Project 4 -->
+<div class="group">
+<a href="https://www.instagram.com/reel/DMiZOlANnNP/?igsh=MXB3NmxraGcwczZpdA==" class="block relative overflow-hidden aspect-[21/9] mb-8" target="_blank" rel="noopener">
+<img src="IMG_9402.jpg"
+class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="ORAIMO COMMERCIAL">
+</a>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-4xl font-bold mb-3">ORAIMO COMMERCIAL</h3>
+<p class="text-xl text-gray-300">Commercial, 2024</p>
+</div>
+<a href="https://www.instagram.com/reel/DMiZOlANnNP/?igsh=MXB3NmxraGcwczZpdA==" class="group inline-flex items-center gap-2 text-lg hover:text-gray-300 transition-colors" target="_blank" rel="noopener">
+View Project
+<i class="ri-arrow-right-line transition-transform group-hover:translate-x-2"></i>
+</a>
+</div>
+</div>
+<!-- Project 5: MARK OF THE BEAST -->
+<div class="group">
+<a href="https://www.instagram.com/reel/DCtVtD8uiVK/?igsh=a2JicGgydGRxNGdv" class="block relative overflow-hidden aspect-[21/9] mb-8" target="_blank" rel="noopener">
+<img src="WhatsApp Image 2025-07-31 at 10.34.56_b23d7c80.jpg"
+class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="MARK OF THE BEAST">
+</a>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-4xl font-bold mb-3">MARK OF THE BEAST</h3>
+<p class="text-xl text-gray-300">Film Project</p>
+</div>
+<a href="https://www.instagram.com/reel/DCtVtD8uiVK/?igsh=a2JicGgydGRxNGdv" class="group inline-flex items-center gap-2 text-lg hover:text-gray-300 transition-colors" target="_blank" rel="noopener">
+View Project
+<i class="ri-arrow-right-line transition-transform group-hover:translate-x-2"></i>
+</a>
+</div>
+</div>
+
+<!-- Partner 1 -->
+<div class="bg-gray-900 p-8 !rounded-button group hover:bg-gray-800 transition duration-300">
+<div class="h-24 flex items-center justify-center mb-6">
+
+</div>
+<h3 class="text-2xl font-bold mb-3">OVERTEA PRODUCTIONS</h3>
+<p class="text-gray-400 mb-4">.FILM</p>
+<div class="flex items-center text-gray-400">
+<span class="w-6 h-6 mr-2 flex items-center justify-center">
+<i class="ri-check-line"></i>
+</span>
+<span>FILM Partner</span>
+</div>
+</div>
+<!-- Partner 2 -->
+<div class="bg-gray-900 p-8 !rounded-button group hover:bg-gray-800 transition duration-300">
+<div class="h-24 flex items-center justify-center mb-6">
+
+</div>
+<h3 class="text-2xl font-bold mb-3">ART224PRODUCTION</h3>
+<p class="text-gray-400 mb-4">FILMS, TV, COMMERCIAL AND DIGITAL ART.</p>
+<div class="flex items-center text-gray-400">
+<span class="w-6 h-6 mr-2 flex items-center justify-center">
+<i class="ri-check-line"></i>
+</span>
+<span>FILM Partner</span>
+</div>
+</div>
+
+<!-- Services Section -->
+<section id="services" class="py-24 bg-black">
+<div class="container mx-auto px-6">
+<div class="mb-16">
+<h2 class="text-4xl font-bold mb-4">Our Services</h2>
+<p class="text-xl text-gray-400 max-w-3xl">Comprehensive film production services delivered with precision, creativity, and technical excellence.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Service 1 -->
+<div class="service-card bg-gray-900 p-8 relative overflow-hidden group">
+<div class="w-16 h-16 mb-6 flex items-center justify-center">
+<i class="ri-movie-line ri-2x"></i>
+</div>
+<h3 class="text-2xl font-bold mb-4">Film Production</h3>
+<div class="service-details">
+<p class="text-gray-400 mb-4">From concept to completion, we handle every aspect of the production process with meticulous attention to detail.</p>
+<ul class="text-gray-400 space-y-2">
+<li class="flex items-start">
+<span class="w-5 h-5 mr-2 flex items-center justify-center mt-0.5">
+<i class="ri-check-line"></i>
+</span>
+Feature Films
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 mr-2 flex items-center justify-center mt-0.5">
+<i class="ri-check-line"></i>
+</span>
+Documentaries
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 mr-2 flex items-center justify-center mt-0.5">
+<i class="ri-check-line"></i>
+</span>
+Commercials
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 mr-2 flex items-center justify-center mt-0.5">
+<i class="ri-check-line"></i>
+</span>
+Music Videos
+</li>
+</ul>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="service-card bg-gray-900 p-8 relative overflow-hidden group">
+<div class="w-16 h-16 mb-6 flex items-center justify-center">
+<i class="ri-film-line ri-2x"></i>
+</div>
+<h3 class="text-2xl font-bold mb-4">Post-Production</h3>
+<div class="service-details">
+<p class="text-gray-400 mb-4">Transform raw footage into polished, professional content with our comprehensive post-production services.</p>
+<ul class="text-gray-400 space-y-2">
+<li class="flex items-start">
+<span class="w-5 h-5 mr-2 flex items-center justify-center mt-0.5">
+<i class="ri-check-line"></i>
+</span>
+Video Editing
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 mr-2 flex items-center justify-center mt-0.5">
+<i class="ri-check-line"></i>
+</span>
+Color Grading
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 mr-2 flex items-center justify-center mt-0.5">
+<i class="ri-check-line"></i>
+</span>
+Sound Design
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 mr-2 flex items-center justify-center mt-0.5">
+<i class="ri-check-line"></i>
+</span>
+Visual Effects
+</li>
+</ul>
+</div>
+</div>
+<!-- Service 3 -->
+<div class="service-card bg-gray-900 p-8 relative overflow-hidden group">
+<div class="w-16 h-16 mb-6 flex items-center justify-center">
+<i class="ri-lightbulb-line ri-2x"></i>
+</div>
+<h3 class="text-2xl font-bold mb-4">Creative Direction</h3>
+<div class="service-details">
+<p class="text-gray-400 mb-4">Expert guidance to shape your vision and bring compelling stories to life through innovative approaches.</p>
+<ul class="text-gray-400 space-y-2">
+<li class="flex items-start">
+<span class="w-5 h-5 mr-2 flex items-center justify-center mt-0.5">
+<i class="ri-check-line"></i>
+</span>
+Concept Development
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 mr-2 flex items-center justify-center mt-0.5">
+<i class="ri-check-line"></i>
+</span>
+Scriptwriting
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 mr-2 flex items-center justify-center mt-0.5">
+<i class="ri-check-line"></i>
+</span>
+Storyboarding
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 mr-2 flex items-center justify-center mt-0.5">
+<i class="ri-check-line"></i>
+</span>
+Visual Identity
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Behind-the-Scenes Section -->
+<section id="about" class="py-24 bg-black">
+<div class="container mx-auto px-6">
+<div class="mb-16">
+<h2 class="text-4xl font-bold mb-4">Behind The Scenes</h2>
+<p class="text-xl text-gray-400 max-w-3xl">Glimpse into our creative process and the dedicated team that brings cinematic visions to life.</p>
+</div>
+<div class="horizontal-scroll flex space-x-6 pb-8">
+<!-- BTS Item 1 -->
+<div class="bts-item relative flex-shrink-0 w-[400px]">
+<img src="IMG_9423.jpg">
+<div class="bts-caption absolute inset-0 bg-black bg-opacity-70 flex items-end p-6">
+
+</div>
+</div>
+<!-- BTS Item 2 -->
+<div class="bts-item relative flex-shrink-0 w-[400px]">
+<img src="IMG_9432.jpg">
+<div class="bts-caption absolute inset-0 bg-black bg-opacity-70 flex items-end p-6">
+
+</div>
+</div>
+<!-- BTS Item 3 -->
+<div class="bts-item relative flex-shrink-0 w-[400px]">
+<img src="IMG_9372.jpg">
+<div class="bts-caption absolute inset-0 bg-black bg-opacity-70 flex items-end p-6">
+
+</div>
+</div>
+<!-- BTS Item 4 -->
+<div class="bts-item relative flex-shrink-0 w-[400px]">
+<img src="IMG_9365-Enhanced-NR.jpg">
+<div class="bts-caption absolute inset-0 bg-black bg-opacity-70 flex items-end p-6">
+<div>
+</div>
+</div>
+<!-- BTS Item 5 -->
+<div class="bts-item relative flex-shrink-0 w-[400px]"> 
+<img src="yt3.jpg">
+<div class="bts-caption absolute inset-0 bg-black bg-opacity-70 flex items-end p-6">
+</div>
+</div>
+</div>
+<!-- BTS Item 6 -->
+<div class="bts-item relative flex-shrink-0 w-[400px]"> 
+<img src="DSCF9701.jpg">
+<div class="bts-caption absolute inset-0 bg-black bg-opacity-70 flex items-end p-6">
+</div>
+</div>
+<!-- BTS Item 7 -->
+<div class="bts-item relative flex-shrink-0 w-[400px]"> 
+<img src="DSCF9713.jpg">
+<div class="bts-caption absolute inset-0 bg-black bg-opacity-70 flex items-end p-6">
+</div>
+</div>
+<!-- BTS Item 8 -->
+<div class="bts-item relative flex-shrink-0 w-[400px]"> 
+<img src="DSCF9754.jpg">
+<div class="bts-caption absolute inset-0 bg-black bg-opacity-70 flex items-end p-6">
+</div>
+</div>
+<!-- BTS Item  9 -->
+<div class="bts-item relative flex-shrink-0 w-[400px]"> 
+<img src="DSCF9775.jpg">
+<div class="bts-caption absolute inset-0 bg-black bg-opacity-70 flex items-end p-6">
+</div>
+</div>
+<!-- BTS Item 10 -->
+<div class="bts-item relative flex-shrink-0 w-[400px]"> 
+<img src="DSCF9778.jpg">
+<div class="bts-caption absolute inset-0 bg-black bg-opacity-70 flex items-end p-6">
+</div>
+</div>
+<!-- BTS Item 12 -->
+<div class="bts-item relative flex-shrink-0 w-[400px]"> 
+<img src="DSCF9783.jpg">
+<div class="bts-caption absolute inset-0 bg-black bg-opacity-70 flex items-end p-6">
+</div>
+</div>
+<!-- BTS Item 13 -->
+<div class="bts-item relative flex-shrink-0 w-[400px]"> 
+<img src="DSCF9836.jpg">
+<div class="bts-caption absolute inset-0 bg-black bg-opacity-70 flex items-end p-6">
+</div>
+</div>
+<!-- BTS Item 14 -->
+<div class="bts-item relative flex-shrink-0 w-[400px]"> 
+<img src="DSCF9868.jpg">
+<div class="bts-caption absolute inset-0 bg-black bg-opacity-70 flex items-end p-6">
+</div>
+</div>
+<!-- BTS Item 15 -->
+<div class="bts-item relative flex-shrink-0 w-[400px]"> 
+<img src="DSCF9879.jpg">
+<div class="bts-caption absolute inset-0 bg-black bg-opacity-70 flex items-end p-6">
+<div>
+<h4 class="text-xl font-bold mb-2">Creative Planning</h4>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Contact (directly below) -->
+<section id="contact" class="py-24 bg-black">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+<div>
+<h2 class="text-4xl font-bold mb-6">Get In Touch</h2>
+<p class="text-xl text-gray-400 mb-8">Ready to bring your vision to life? Contact us to discuss your next project.</p>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label for="name" class="block text-sm font-medium mb-2">Name</label>
+<input type="text" id="name" class="w-full px-4 py-3 border-none !rounded-button bg-gray-900" placeholder="Your name">
+</div>
+<div>
+<label for="email" class="block text-sm font-medium mb-2">Email</label>
+<input type="email" id="email" class="w-full px-4 py-3 border-none !rounded-button bg-gray-900" placeholder="Your email">
+</div>
+</div>
+<div>
+<label for="subject" class="block text-sm font-medium mb-2">Subject</label>
+<input type="text" id="subject" class="w-full px-4 py-3 border-none !rounded-button bg-gray-900" placeholder="Subject">
+</div>
+<div>
+<label for="message" class="block text-sm font-medium mb-2">Message</label>
+<textarea id="message" rows="5" class="w-full px-4 py-3 border-none !rounded-button bg-gray-900" placeholder="Your message"></textarea>
+</div>
+<button type="submit" class="bg-white text-black px-8 py-3 font-medium hover:bg-opacity-90 transition !rounded-button whitespace-nowrap">
+Send Message
+</button>
+</form>
+</div>
+<div>
+
+<p>Nairobi(kenya), PO BOX 10001</p>
+<p>KENYA</p>
+</address>
+</div>
+<div>
+<h3 class="text-2xl font-bold mb-6">Connect With Us</h3>
+
+<!-- Align Instagram, TikTok, and YouTube logos horizontally and evenly spaced -->
+<div class="flex justify-center items-center space-x-8 mt-6">
+  <a href="https://www.instagram.com/otienookinyi?igsh=aWhleXpzaHA3N20x" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition">
+    <i class="ri-instagram-line ri-lg"></i>
+  </a>
+  <a href="https://www.tiktok.com/@ytpictures?_t=ZM-8yTp7PjEAUQ&_r=1" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition">
+    <i class="ri-tiktok-line ri-lg"></i>
+  </a>
+  <a href="https://www.youtube.com/@ytpictures" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition">
+    <i class="ri-youtube-line ri-lg"></i>
+  </a>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex items-center">
+<div class="w-10 h-10 flex items-center justify-center mr-4">
+<i class="ri-mail-line ri-lg"></i>
+</div>
+<p>otienookinyi@gmail.com</p>
+</div>
+<div class="flex items-center">
+<div class="w-10 h-10 flex items-center justify-center mr-4">
+<i class="ri-phone-line ri-lg"></i>
+</div>
+<p>+254 742497148</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter Section -->
+<section class="py-16 bg-gray-900">
+<div class="container mx-auto px-6">
+<div class="max-w-3xl mx-auto text-center">
+<h2 class="text-3xl font-bold mb-4">DONATE</h2>
+<p class="text-gray-400 mb-8">Stay updated with our latest projects.</p>
+<form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+<input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 border-none !rounded-button bg-black">
+<button type="submit" class="bg-white text-black px-6 py-3 font-medium hover:bg-opacity-90 transition !rounded-button whitespace-nowrap">
+DONATE
+</button>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-black py-16">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+<div>
+<a href="#" class="text-2xl font-['Pacifico'] text-white block mb-6">YT PICTURES</a>
+<p class="text-gray-400 mb-6">Award-winning film production studio creating compelling visual narratives .</p>
+<div class="flex space-x-4">
+<a href="https://www.instagram.com/otienookinyi?igsh=aWhleXpzaHA3N20x" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition">
+<i class="ri-instagram-line ri-lg"></i>
+</a>
+<a href="https://www.tiktok.com/@ytpictures?_t=ZM-8yTp7PjEAUQ&_r=1" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-tiktok-line"></i>
+</div>
+</a>
+<a href="https://www.youtube.com/@ytpictures" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-youtube-line"></i>
+</div>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6">Quick Links</h4>
+<ul class="space-y-3">
+<li><a href="#partnerships" class="text-gray-400 hover:text-white transition">Partners</a></li>
+<li><a href="#services" class="text-gray-400 hover:text-white transition">Services</a></li>
+<li><a href="#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Careers</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6">Services</h4>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-400 hover:text-white transition">Film Production</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Post-Production</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Creative Direction</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Sound Design</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Visual Effects</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6">Contact</h4>
+<address class="not-italic text-gray-400 space-y-3">
+
+<p>NAIROBI(K)</p>
+<p>KENYA</p>
+<p>otienookinyi@gmail.com</p>
+<p>+254 742497148</p>
+</address>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 your thoughts pictures. All rights reserved.</p>
+<div class="flex space-x-6">
+<a href="#" class="text-gray-400 hover:text-white transition text-sm">Privacy Policy</a>
+<a href="#" class="text-gray-400 hover:text-white transition text-sm">Terms of Service</a>
+<a href="#" class="text-gray-400 hover:text-white transition text-sm">Cookie Policy</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Custom cursor
+const cursor = document.querySelector('.custom-cursor');
+if (cursor) {
+document.addEventListener('mousemove', function(e) {
+cursor.style.left = e.clientX + 'px';
+cursor.style.top = e.clientY + 'px';
+});
+document.addEventListener('mousedown', function() {
+cursor.style.transform = 'translate(-50%, -50%) scale(0.8)';
+});
+document.addEventListener('mouseup', function() {
+cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+});
+}
+});
+document.addEventListener('DOMContentLoaded', function() {
+// Mobile menu toggle
+const menuButton = document.querySelector('button.md\\:hidden');
+const closeButton = document.getElementById('close-menu');
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+if (menuButton && closeButton && mobileMenu) {
+menuButton.addEventListener('click', function() {
+mobileMenu.classList.remove('translate-x-full');
+});
+closeButton.addEventListener('click', function() {
+mobileMenu.classList.add('translate-x-full');
+});
+mobileMenuLinks.forEach(link => {
+link.addEventListener('click', function() {
+mobileMenu.classList.add('translate-x-full');
+});
+});
+}
+});
+document.addEventListener('DOMContentLoaded', function() {
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+if (targetId === '#') return;
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+window.scrollTo({
+top: targetElement.offsetTop - 80,
+behavior: 'smooth'
+});
+}
+});
+});
+});
+document.addEventListener('DOMContentLoaded', function() {
+// Timeline dots hover effect
+const timelineDots = document.querySelectorAll('.timeline-dot');
+timelineDots.forEach(dot => {
+dot.addEventListener('mouseenter', function() {
+this.classList.add('scale-125');
+});
+dot.addEventListener('mouseleave', function() {
+this.classList.remove('scale-125');
+});
+});
+});
+</script>
+</body>
+</html>
+
